@@ -11,24 +11,22 @@ import UIKit
 class FilmsTableViewCell: UITableViewCell {
     var filmCompany:FilmCompany? {
         didSet {
-            //self.collectionView.reloadData()
         }
     }
-    //var collectionView: UICollectionView
     let collectionCellIdentifier = "collectionCellIdentifier"
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        //self.collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 200, height: 200), collectionViewLayout: UICollectionViewLayout())
-        
-        
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 5, right: 5)
-        layout.itemSize = CGSize(width: 100, height: 200)
+        layout.itemSize = CGSize(width: 150, height: 280)
         
         let collectionView:UICollectionView = UICollectionView(frame: self.frame, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isPagingEnabled = false
         collectionView.register(FilmCollectionViewCell.self, forCellWithReuseIdentifier: collectionCellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -65,6 +63,6 @@ extension FilmsTableViewCell:UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print("will display")
+        //print("will display")
     }
 }

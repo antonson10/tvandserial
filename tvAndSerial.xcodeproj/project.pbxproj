@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AC56F8A213E8AD4007AC4AC /* TopBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC56F89213E8AD4007AC4AC /* TopBarItem.swift */; };
+		6AC56F8C213EC87B007AC4AC /* FilmTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC56F8B213EC87B007AC4AC /* FilmTableHeaderView.swift */; };
 		B9895B04213C77360070A324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9895B03213C77360070A324 /* AppDelegate.swift */; };
 		B9895B06213C77360070A324 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9895B05213C77360070A324 /* ViewController.swift */; };
 		B9895B0B213C77370070A324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9895B0A213C77370070A324 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AC56F89213E8AD4007AC4AC /* TopBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarItem.swift; sourceTree = "<group>"; };
+		6AC56F8B213EC87B007AC4AC /* FilmTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableHeaderView.swift; sourceTree = "<group>"; };
 		B9895B00213C77360070A324 /* tvAndSerial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvAndSerial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9895B03213C77360070A324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9895B05213C77360070A324 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,23 +65,17 @@
 			isa = PBXGroup;
 			children = (
 				B9A6CF9C213DD46C009F856A /* Model */,
-				B9895B15213C7B3A0070A324 /* Supporting Files */,
 				B9895B03213C77360070A324 /* AppDelegate.swift */,
 				B9895B05213C77360070A324 /* ViewController.swift */,
 				B9895B18213C88100070A324 /* FilmsTableViewCell.swift */,
 				B9A6CFA1213DE016009F856A /* FilmCollectionViewCell.swift */,
+				6AC56F89213E8AD4007AC4AC /* TopBarItem.swift */,
+				6AC56F8B213EC87B007AC4AC /* FilmTableHeaderView.swift */,
 				B9895B0A213C77370070A324 /* Assets.xcassets */,
 				B9895B0C213C77370070A324 /* LaunchScreen.storyboard */,
 				B9895B0F213C77370070A324 /* Info.plist */,
 			);
 			path = tvAndSerial;
-			sourceTree = "<group>";
-		};
-		B9895B15213C7B3A0070A324 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B9A6CF9C213DD46C009F856A /* Model */ = {
@@ -159,12 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC56F8C213EC87B007AC4AC /* FilmTableHeaderView.swift in Sources */,
 				B9A6CFA2213DE016009F856A /* FilmCollectionViewCell.swift in Sources */,
 				B9895B06213C77360070A324 /* ViewController.swift in Sources */,
 				B9A6CF9E213DD574009F856A /* Film.swift in Sources */,
 				B9A6CFA0213DD6D0009F856A /* FilmCompany.swift in Sources */,
 				B9895B19213C88100070A324 /* FilmsTableViewCell.swift in Sources */,
 				B9895B04213C77360070A324 /* AppDelegate.swift in Sources */,
+				6AC56F8A213E8AD4007AC4AC /* TopBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,15 +300,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5GZ67J83W;
 				INFOPLIST_FILE = tvAndSerial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.avchugunov.tvAndSerial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,15 +321,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5GZ67J83W;
 				INFOPLIST_FILE = tvAndSerial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.avchugunov.tvAndSerial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

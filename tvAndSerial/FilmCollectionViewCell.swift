@@ -18,10 +18,9 @@ class FilmCollectionViewCell: UICollectionViewCell {
     }
     private let imageView:UIImageView = {
         let iv = UIImageView()
-        iv.layer.cornerRadius = 10
+        iv.layer.cornerRadius = 5
         iv.layer.masksToBounds = true
         iv.clipsToBounds = true
-        iv.contentMode = UIViewContentMode.scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
@@ -58,7 +57,7 @@ class FilmCollectionViewCell: UICollectionViewCell {
         addSubview(yearLabel)
         let views:[String:UIView] = ["imageView": imageView, "nameLabel":  nameLabel,"yearLabel": yearLabel]
         var constraints = [NSLayoutConstraint]()
-        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-5-[imageView(150)]-[nameLabel(40)]-[yearLabel(20)]-|", options: [], metrics: nil, views: views)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView(188)]-[nameLabel(40)]-[yearLabel(20)]-|", options: [], metrics: nil, views: views)
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-5-[imageView]-5-|", options: [], metrics: nil, views: views)
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-5-[nameLabel]-5-|", options: [], metrics: nil, views: views)
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-5-[yearLabel]-5-|", options: [], metrics: nil, views: views)
